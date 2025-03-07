@@ -83,7 +83,7 @@ local function GetURL(scripturl)
 	if shared.VapeDeveloper then
 		return readfile("vape/"..scripturl)
 	else
-		return game:HttpGet("https://raw.githubusercontent.com/V1per-Dev/Lunar-Client/main/"..scripturl, true)
+		return game:HttpGet("https://raw.githubusercontent.com/0x274/Lunar-Client/main/"..scripturl, true)
 	end
 end
 local shalib = loadstring(GetURL("Libraries/sha.lua"))()
@@ -259,7 +259,7 @@ local function getcustomassetfunc(path)
 			textlabel:Remove()
 		end)
 		local req = requestfunc({
-			Url = "https://raw.githubusercontent.com/V1per-Dev/Lunar-Client/main/"..path:gsub("vape/assets", "assets"),
+			Url = "https://raw.githubusercontent.com/0x274/Lunar-Client/main/"..path:gsub("vape/assets", "assets"),
 			Method = "GET"
 		})
 		writefile(path, req.Body)
@@ -2245,3 +2245,4 @@ runcode(function()
 		["Function"] = function(val) end,
 	})
 end)
+
