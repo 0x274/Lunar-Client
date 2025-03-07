@@ -82,7 +82,7 @@ local function GetURL(scripturl)
 		assert(betterisfile("vape/"..scripturl), "File not found : vape/"..scripturl)
 		return readfile("vape/"..scripturl)
 	else
-		local res = game:HttpGet("https://raw.githubusercontent.com/0x274/Lunar-Client/main/"..scripturl, true)
+		local res = game:HttpGet("https://raw.githubusercontent.com/V1per-Dev/Lunar-Client/main/"..scripturl, true)
 		assert(res ~= "404: Not Found", "File not found : vape/"..scripturl)
 		return res
 	end
@@ -219,7 +219,7 @@ local function getcustomassetfunc(path)
 			textlabel:Remove()
 		end)
 		local req = requestfunc({
-			Url = "https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/"..path:gsub("vape/assets", "assets"),
+			Url = "https://raw.githubusercontent.com/0x274/Lunar-Client/main/"..path:gsub("vape/assets", "assets"),
 			Method = "GET"
 		})
 		writefile(path, req.Body)
@@ -1989,4 +1989,3 @@ VK : %s]], os.date("!%X",math.floor(tick() - splitted[1])), (splitted[2] + kills
 		["Priority"] = 2
 	})
 end)
-
